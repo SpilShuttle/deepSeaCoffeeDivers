@@ -13,7 +13,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   /*change these sizes to fit into your project*/
   width: 60px;
   height: 60px;
@@ -27,43 +28,71 @@
   height: 40%;
   position: absolute;
   border-radius: 50%;
-  animation: spin 2s ease infinite;
+  -webkit-animation: spin 2s ease infinite;
+          animation: spin 2s ease infinite;
 }
 
 .preloader :first-child {
   background: #E4682B;
-  animation-delay: -1.5s;
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
 }
 
 .preloader :nth-child(2) {
   background: #fff;
-  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
 }
 
 .preloader :nth-child(3) {
   background: #FDA543;
-  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
 }
 
 .preloader :last-child {
   background: #f7f7f7;
 }
 
-@keyframes spin {
+@-webkit-keyframes spin {
   0%, 100% {
-    transform: translate(0);
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
   25% {
-    transform: translate(160%);
+    -webkit-transform: translate(160%);
+            transform: translate(160%);
   }
   50% {
-    transform: translate(160%, 160%);
+    -webkit-transform: translate(160%, 160%);
+            transform: translate(160%, 160%);
   }
   75% {
-    transform: translate(0, 160%);
+    -webkit-transform: translate(0, 160%);
+            transform: translate(0, 160%);
+  }
+}
+
+@keyframes spin {
+  0%, 100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(160%);
+            transform: translate(160%);
+  }
+  50% {
+    -webkit-transform: translate(160%, 160%);
+            transform: translate(160%, 160%);
+  }
+  75% {
+    -webkit-transform: translate(0, 160%);
+            transform: translate(0, 160%);
   }
 }
 .loaded_hiding {
+  -webkit-transition: 0.3s opacity;
   transition: 0.3s opacity;
   opacity: 0;
 }
@@ -83,7 +112,8 @@ body .background {
   background-size: cover;
 }
 body .background .blur {
-  backdrop-filter: blur(5px) brightness(30%);
+  -webkit-backdrop-filter: blur(5px) brightness(30%);
+          backdrop-filter: blur(5px) brightness(30%);
 }
 
 .hero h1 {
@@ -98,5 +128,3 @@ body .background .blur {
 .about-us p {
   margin-bottom: 0.3rem;
 }
-
-/*# sourceMappingURL=style.css.map */
